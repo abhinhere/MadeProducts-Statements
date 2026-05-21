@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,6 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Made Products — Client Statement Tracker",
@@ -20,9 +24,15 @@ export const metadata: Metadata = {
   description:
     "ERP-lite financial ledger for Made Products manufacturing business. Manage client accounts, billing statements, payment tracking, and collections.",
   keywords: ["manufacturing ERP", "client billing", "invoice tracker", "payment management"],
+  manifest: "/manifest.json",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Statement Tracker",
   },
 };
 

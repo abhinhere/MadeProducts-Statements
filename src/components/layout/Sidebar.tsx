@@ -7,6 +7,7 @@ import { LayoutDashboard, FileText, LogOut, Menu, X, ShieldAlert } from "lucide-
 import { logoutAction } from "@/app/actions/auth";
 import { useToast } from "../ui/Toast";
 import styles from "./Sidebar.module.css";
+import InstallPWA from "../ui/InstallPWA";
 
 interface SidebarProps {
   user: {
@@ -79,6 +80,7 @@ export default function Sidebar({ user }: SidebarProps) {
                 </Link>
               );
             })}
+            <InstallPWA />
           </nav>
         </div>
 
