@@ -492,7 +492,7 @@ export default function ClientProfileContainer({
             <div key={pay.id} className={styles.paymentItem}>
               <div className={styles.paymentMeta}>
                 <span className={styles.paymentTitle}>{formatCurrency(pay.receivedAmount)}</span>
-                <span className={styles.paymentDetails}>#{pay.invoiceNumber} · {pay.paymentMethod.replace("_", " ")}</span>
+                <span className={styles.paymentDetails}>{pay.referenceNumber ? `#${pay.referenceNumber} · ` : ""}{pay.paymentMethod.replace("_", " ")}</span>
                 <span className={styles.paymentDetails}>{formatDate(pay.date)}</span>
               </div>
               <div style={{ display: "flex", gap: "8px" }}>
