@@ -151,8 +151,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--spacing-sm);
-  flex-wrap: wrap;
-  gap: var(--spacing-md);
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
 }
 
 /* Statement actions styling */
