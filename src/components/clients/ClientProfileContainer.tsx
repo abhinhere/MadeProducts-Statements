@@ -424,7 +424,7 @@ export default function ClientProfileContainer({
                   <IndianRupee size={16} /><span>Pay</span>
                 </button>
                 <button onClick={() => setActiveModal("new-statement")} className={`${formStyles.button} ${formStyles.buttonPrimary}`}>
-                  <Plus size={16} /><span>Add Bill</span>
+                  <Plus size={16} /><span>Bill</span>
                 </button>
               </div>
             </div>
