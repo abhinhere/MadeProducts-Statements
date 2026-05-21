@@ -121,7 +121,7 @@
 
 @media (max-width: 640px) {
   .balanceOverview {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 12px;
   }
