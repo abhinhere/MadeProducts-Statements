@@ -25,7 +25,7 @@ export async function createClientAction(formData: z.infer<typeof clientFormSche
     });
     
     revalidatePath("/clients");
-    revalidatePath("/dashboard");
+    revalidatePath("/home");
     return { success: true, data: client };
   } catch (error: any) {
     console.error("Error creating client:", error);
@@ -53,6 +53,7 @@ export async function updateClientAction(id: string, formData: z.infer<typeof cl
 
     revalidatePath(`/clients/${id}`);
     revalidatePath("/clients");
+    revalidatePath("/home");
     return { success: true, data: client };
   } catch (error) {
     console.error("Error updating client:", error);
@@ -77,7 +78,7 @@ export async function deleteClientAction(id: string) {
     });
 
     revalidatePath("/clients");
-    revalidatePath("/dashboard");
+    revalidatePath("/home");
     return { success: true };
   } catch (error) {
     console.error("Error deleting client:", error);

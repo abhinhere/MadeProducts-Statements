@@ -48,7 +48,7 @@ export async function createStatementAction(formData: {
 
     revalidatePath("/statements");
     revalidatePath(`/clients/${clientId}`);
-    revalidatePath("/dashboard");
+    revalidatePath("/home");
     return { success: true, data: statement };
   } catch (error: any) {
     console.error("Error creating statement:", error);
@@ -81,7 +81,7 @@ export async function deleteStatementAction(id: string) {
 
     revalidatePath("/statements");
     revalidatePath(`/clients/${statement.clientId}`);
-    revalidatePath("/dashboard");
+    revalidatePath("/home");
     return { success: true };
   } catch (error) {
     console.error("Error deleting statement:", error);

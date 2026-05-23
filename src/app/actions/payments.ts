@@ -86,7 +86,7 @@ export async function addPaymentAction(formData: z.infer<typeof paymentFormSchem
 
     revalidatePath("/statements");
     revalidatePath(`/clients/${result.clientId}`);
-    revalidatePath("/dashboard");
+    revalidatePath("/home");
     return { success: true, data: result.payment };
   } catch (error: any) {
     console.error("Error adding payment:", error);
@@ -128,7 +128,7 @@ export async function deletePaymentAction(id: string) {
 
     revalidatePath("/statements");
     revalidatePath(`/clients/${result.clientId}`);
-    revalidatePath("/dashboard");
+    revalidatePath("/home");
     return { success: true };
   } catch (error: any) {
     console.error("Error deleting payment:", error);

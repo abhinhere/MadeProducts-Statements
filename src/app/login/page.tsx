@@ -35,11 +35,12 @@ export default function LoginPage() {
   useEffect(() => {
     if (state.success) {
       showToast("Logged in successfully!", "success");
-      window.location.href = "/home";
+      router.push("/home");
+      router.refresh(); // Refresh to ensure server components fetch latest auth state
     } else if (state.error) {
       showToast(state.error, "error");
     }
-  }, [state, showToast]);
+  }, [state, showToast, router]);
 
   return (
     <div className={styles.wrapper}>
